@@ -27,33 +27,30 @@ speedLimitRadio.addEventListener('click', () => {
 
 
 
+
 const submit = document.querySelector('#submit')
 submit.addEventListener('click', (event) => {
   const speed = +document.getElementById('speed').value
   const road = +document.getElementById('road').value
   const car = +document.getElementById('car').value
   const sum = document.getElementById('sum')
-  event.preventDefault()
-
-    
+  const speedSityOrRoad = document.getElementsByName('scr')
   
-  let cost = Math.sqrt((speed * road * 254) / car).toFixed(1)
+  
+  event.preventDefault()
+  const cost = Math.sqrt((speed * road * 254) / car).toFixed(1)
+  sum.value = cost + ' км/ч'
 
-  maxSpeed(cost, sum)
+    for( let i = 0; i < speedSityOrRoad.length; i++) {
+      
+      if(speedSityOrRoad[0].checked && cost > 50) {
+        sum.style.color = 'red'
+      } else if(speedSityOrRoad[1].checked && cost > 90){
+        sum.style.color = 'red'
+      } else{
+        sum.style.color = 'blue'
+      }
+    }
 
-  return sum.value = cost + ' км/ч'
+  return sum
 })
-
-
-
-
-function maxSpeed(x, y) {
-  if (x >= 50) {
-    y.style.color = 'red'
-  } else {
-    y.style.color = 'rgb(104, 104, 235)'
-  }
-}
-
-
-
