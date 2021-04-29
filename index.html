@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Скорость транспорного средства по следу торможения</title>
+</head>
+<body>
+  
+  
+    <div class="container" id="app">
+
+      <img src="./menu.png" width="30px" class="tag">
+        <div class="isSity">
+          <label for="" name="isSity" class="radio">
+            Поставьте галочку если хотите узнать было ли привышение скорости
+          </label>
+          <div class="speedLimitRadio"><span class="active"></span></div>
+        </div>
+
+      <form action="">
+
+        
+
+        <label class="label">Скорость равняется:</label>
+        <input type="text" id="sum" class="input sum" value="" disabled >
+
+        <label class="label">Длина тормозного следа в метрах</label>
+        <input type="text" id="speed" class="input" value="">
+
+        <label class="label">Дорожное покрытие</label>
+        <select id="road" class="select input">
+          <option value="0.7">сухой асфальт</option>
+          <option value="0.4">мокрый асфальт</option>
+          <option value="0.5">грунтовая дорога</option>
+          <option value="0.2">укатаный снег</option>
+          <option value="0.1">обледенение</option>
+        </select>
+
+        <label class="label">Транспортное средство</label>
+        <select id="car" class="select input">
+          <option value="1">легковой автомобиль</option>
+          <option value="1.2">грузовой автомобиль</option>
+        </select>
+
+        <div class="radioInput">
+          <label for="" name="sity" class="radio">Черта города</label>
+          <input type="radio" name="sity" class="radio" >
+
+          <label for="" name="sity" class="radio">Трасса</label>
+          <input type="radio" name="sity" class="radio">
+       </div>  
+
+
+        <a id="submit" class="btn">Посчитать</a>  
+
+      </form>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
