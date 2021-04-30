@@ -48,15 +48,16 @@ submit.addEventListener('click', (event) => {
 /////Перетаскивание элемента
 
 const ELEM = document.querySelector('.container')
+const MOVE = document.querySelector('.move')
 let offsetX
 let offsetY
 
-ELEM.addEventListener('dragstart', function(event) {
+MOVE.addEventListener('dragstart', function(event) {
   offsetX = event.offsetX
   offsetY = event.offsetY
 })
 
-ELEM.addEventListener('dragend', function(event) {
+MOVE.addEventListener('dragend', function(event) {
   ELEM.style.top = (event.pageY - offsetY) + 'px'
   ELEM.style.left = (event.pageX - offsetX) + 'px'
 })

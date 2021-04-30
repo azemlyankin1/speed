@@ -13,9 +13,20 @@ body {
   max-width: 600px;
   /* margin: 200px auto 0px auto; */
   text-align: center;
-  padding: 23px  0;
+  
   
 }
+
+.move {
+  display: block;
+  border: 1px solid black;
+  height: 20px;
+  width: 100%;
+  cursor: move;
+  background-color: rgb(134, 190, 129);
+  margin-bottom: 10px;
+}
+
 label, input, select {
   display: block;
   margin: 0 auto;
@@ -57,7 +68,7 @@ select {
   display: block;
   cursor: pointer;
   width: 100px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 }
 
 
