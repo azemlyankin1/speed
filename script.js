@@ -1,32 +1,22 @@
 const icon = document.querySelector('.tag')
 const subIcon = document.querySelector('.isSity')
 
-
 icon.addEventListener('click', () => {
+  
   subIcon.style.display = (subIcon.style.display == 'none') ? 'block' : 'none'
+  
+
 })
-
-
 
 const speedLimitRadio = document.querySelector('.speedLimitRadio')
 const input = document.querySelector('.radioInput')
 const active = document.querySelector('.active')
-
-
 
 speedLimitRadio.addEventListener('click', () => {
   input.style.display = (input.style.display == 'none') ? 'flex' : 'none'
   active.style.display = (active.style.display == 'none') ? 'block' : 'none'
 
 })
-
-
-
-
-
-
-
-
 
 const submit = document.querySelector('#submit')
 submit.addEventListener('click', (event) => {
@@ -53,4 +43,20 @@ submit.addEventListener('click', (event) => {
     }
 
   return sum
+})
+
+/////Перетаскивание элемента
+
+const ELEM = document.querySelector('.container')
+let offsetX
+let offsetY
+
+ELEM.addEventListener('dragstart', function(event) {
+  offsetX = event.offsetX
+  offsetY = event.offsetY
+})
+
+ELEM.addEventListener('dragend', function(event) {
+  ELEM.style.top = (event.pageY - offsetY) + 'px'
+  ELEM.style.left = (event.pageX - offsetX) + 'px'
 })
