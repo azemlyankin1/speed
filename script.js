@@ -38,7 +38,7 @@ submit.addEventListener('click', (event) => {
       } else if(speedSityOrRoad[1].checked && cost > 90){
         sum.style.color = 'red'
       } else{
-        sum.style.color = 'blue'
+        sum.style.color = 'white'
       }
     }
 
@@ -61,3 +61,8 @@ MOVE.addEventListener('dragend', function(event) {
   ELEM.style.top = (event.pageY - offsetY) + 'px'
   ELEM.style.left = (event.pageX - offsetX) + 'px'
 })
+// __________________________________________
+
+resize('#app', '.resize')
+
+
